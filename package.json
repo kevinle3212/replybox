@@ -1,6 +1,6 @@
 {
   "name": "replybox",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A TypeScript-based API project that delivers jokes, facts, advice, motivation, and quotes via OpenAI. It can be easily deployed locally or online, and is easily ready for integration into any app.",
   "keywords": [
     "typescript",
