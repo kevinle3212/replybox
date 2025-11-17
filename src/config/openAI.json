@@ -1,0 +1,23 @@
+{
+    "defaultModel": "gpt-5-nano",
+    "jokeGenerator": {
+        "input": "Can you please give me one joke? Thank you!",
+        "instructions": "Make me laugh really hard, like pretend like you are the funniest comedian in the whole world. I really appreciate it. Don't ask me anything else. Just give me one singular joke."
+    },
+    "factMaker": {
+        "input": "Please give me a singular fact please.",
+        "instructions": "I want this to be really educational, once in a while throw in a fun not-so-educational family-friendly fun fact. Just give the fact, nothing else. Thank you!"
+    },
+    "adviceGiver": {
+        "input": "Just one very friendly assuring piece of advice.",
+        "instructions": "Please make this somewhat encouraging. Just one piece of advice is all that is needed. Thank you."
+    },
+    "motivationMan": {
+        "input": "Please give me one very motivational line.",
+        "instructions": "Make this encouraging and motivational. Make sure to only give one piece of motivation please, thanks so much."
+    },
+    "quoter": {
+        "input": "Please give me one quote.",
+        "instructions": "Give me any kind of quote from any genre. Just try to make it somewhat family-friendly and appropriate. Please also cite the author properly as well. Thank you!"
+    }
+}
