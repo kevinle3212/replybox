@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/debug",
+        "explainFiles": true,
+        "extendedDiagnostics": true,
+        "generateTrace": true,
+        "listEmittedFiles": true,
+        "listFiles": true,
+        "traceResolution": true,
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "extends": "@tsconfig/strictest/tsconfig.json", // npm install --save-dev @tsconfig/strictest
+    "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.json"],
+    "exclude": ["./node_modules", "./dist"],
+    "compilerOptions": {
+        "allowArbitraryExtensions": true,
+        "allowUmdGlobalAccess": true,
+        "customConditions": [], // https://www.typescriptlang.org/tsconfig/#customConditions
+        "module": "NodeNext", // https://www.typescriptlang.org/tsconfig/#module
+        "moduleResolution": "NodeNext", // https://www.typescriptlang.org/tsconfig/#moduleResolution
+        "moduleSuffixes": [], // https://www.typescriptlang.org/tsconfig/#moduleSuffixes
+        "noUncheckedSideEffectImports": true,
+        "resolveJsonModule": true,
+        "rewriteRelativeImportExtensions": true,
+        "typeRoots": ["./node_modules/@types", "./types"],
+        "declarationDir": "./dist/types",
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "preserveConstEnums": true,
+        "erasableSyntaxOnly": true,
+        "isolatedDeclarations": true,
+        "preserveSymlinks": true,
+        "verbatimModuleSyntax": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": ["ESNext", "DOM", "WebWorker", "ScriptHost"],
+        "moduleDetection": "force",
+        "target": "ESNext",
+        "generateCpuProfile": "./dist/tsc-output.profile",
+        "composite": true,
+        "tsBuildInfoFile": "./dist/information.tsbuildinfo",
+        "noErrorTruncation": true,
+        "preserveWatchOutput": true,
+    },
+    "watchOptions": {
+        "fallbackPolling": "dynamicpriority",
+        "synchronousWatchDirectory": true,
+        "excludeDirectories": ["./node_modules", "./dist"]
+    }
+}
+
