@@ -75,6 +75,7 @@ cp .env.example .env
 d. Add your OpenAI API key to `.env`:
 
 ```env
+EXPRESS_PORT=1234
 OPENAI_API_KEY=your_api_key_here
 OPENAI_MODEL=gpt-4
 NODE_ENV=development
@@ -87,7 +88,8 @@ NODE_ENV=development
 Run the application:
 
 ```bash
-npm run dev
+npm run build
+npm start
 ```
 
 ### As a TypeScript Module
@@ -98,7 +100,7 @@ You can also import and use ReplyBox in your own TypeScript/JavaScript projects:
 import OpenAIHelper from "#services/openAI";
 
 // Initialize the helper.
-const openAI = new OpenAIHelper(process.env.OPENAI_API_KEY);
+const openAI = new OpenAIHelper(process.env["OPENAI_API_KEY"]);
 
 // Generate a joke.
 const joke = await openAI.createAJoke();
@@ -175,11 +177,11 @@ All prompts and instructions are configurable in `config/openAI.json`:
   "defaultModel": "gpt-4",
   "jokeGenerator": {
     "input": "Tell me a joke",
-    "instructions": "Generate a funny, family-friendly joke"
+    "instructions": "Generate a funny, family-friendly joke."
   },
   "factMaker": {
     "input": "Tell me a fact",
-    "instructions": "Generate an interesting and educational fact"
+    "instructions": "Generate an interesting and educational fact."
   }
 }
 ```
@@ -205,7 +207,7 @@ Creates a new instance of OpenAIHelper.
 **Example:**
 
 ```typescript
-const openAI = new OpenAIHelper(process.env.OPENAI_API_KEY);
+const openAI = new OpenAIHelper(process.env["OPENAI_API_KEY"]);
 ```
 
 #### Methods
@@ -310,7 +312,7 @@ const quote = await openAI.quoter();
 
 ## Testing
 
-You can manually test ReplyBox by running the CLI or importing the module in your own TypeScript/JavaScript projects. All methods return promises and handle errors gracefully.
+You can manually test ReplyBox by running this yourself locally or importing the module in your own TypeScript/JavaScript projects. All methods return promises and handle errors gracefully.
 
 ## License
 
